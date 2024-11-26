@@ -4,7 +4,7 @@ import './App.css';
 import Home from './components/Home';
 import Contactus from './components/Contactus';
 import Aboutus from './components/Aboutus';
-import Dashboard from './components/Dashboard';
+import DAshboard from './components/Dashboard';
 import Login from './components/Login';
 function App() {
   return (
@@ -23,10 +23,12 @@ function App() {
         <Route path='/about' element={<Aboutus/>} />
         </Routes>
         </Router>*/}
-        <Routes>
-        <Route path='/dashboard' element={<Dashboard/>} />
-        <Route path='/login' element={<Login/>} />
-        </Routes>
+        <Router>
+          <Routes>
+            <Route path='/dashboard' element={<DAshboard/>} />
+            <Route path='/' element={<Login/>} />
+          </Routes>
+        </Router>
     </div>
   );
 }

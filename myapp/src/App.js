@@ -4,23 +4,29 @@ import './App.css';
 import Home from './components/Home';
 import Contactus from './components/Contactus';
 import Aboutus from './components/Aboutus';
+import Dashboard from './components/Dashboard';
+import Login from './components/Login';
 function App() {
   return (
     <div className="App">
       
-      <Router>
-        <nav>
+      {/*<Router>
+        { <nav>
           <ul>
             <li><Link to="/home">Home</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
           </ul>
-        </nav>
+        </nav> }
         <Routes>
         <Route path='/home' element={<Home/>} />
         <Route path='/contact' element={<Contactus/>} />
         <Route path='/about' element={<Aboutus/>} />
         </Routes>
-      </Router>
+        </Router>*/}
+        <Routes>
+        <Route path='/dashboard' element={<Dashboard/>} />
+        <Route path='/login' element={<Login/>} />
+        </Routes>
     </div>
   );
 }
